@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +13,11 @@
 </head>
 <body>
     <div class="container">
+        <?php if (isset($_SESSION['error'])): ?>
+            <div class="error"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
+        <?php endif; ?>
         <h1>Login</h1>
-        <form action="" method="post">
-            <div class="campo">
-                <label for="user">Usuário</label>
-                <input type="text" name="user" id="user" placeholder="user" required>
-            </div>
+        <form action="./action/login.php" method="post">
             <div class="campo">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="email" required>
