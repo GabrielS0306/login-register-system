@@ -1,5 +1,6 @@
 <?php
 
+    // login.php - processa o login do usuário
     session_start();
     require_once '../DataBase/conexao.php';
 

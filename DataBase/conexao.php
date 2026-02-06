@@ -1,5 +1,10 @@
 <?php 
 
+    /**
+     * Conexão com o banco de dados usando PDO
+     * 
+     * Certifique-se de substituir as credenciais de conexão (host, dbname, username, password) pelos valores corretos do seu ambiente de banco de dados.
+     */
     try {
         $host = 'localhost';
         $dbname = 'auth_system';

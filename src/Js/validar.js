@@ -1,3 +1,4 @@
+// Validação de formulário para garantir que todos os campos sejam preenchidos antes de enviar para o backend
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
