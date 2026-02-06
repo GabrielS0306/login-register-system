@@ -22,9 +22,10 @@
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="email" required>
             </div>
-            <div class="campo">
+            <div class="campo password">
                 <label for="password">Senha</label>
                 <input type="password" name="password" id="password" placeholder="password" required>
+                <i id="togglePassword" class="fa-solid fa-eye-slash"></i>
             </div>
             <div id="forgot_password">
                 <a href="#">forgot password?</a>
@@ -43,8 +44,13 @@
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
         </div>
+        <p class="auth-link">
+            Não tem uma conta?
+            <a href="register.php">Cadastre-se</a>
+        </p>
     </div>
 
+    <script src="./src/Js/script.js"></script>
     <script src="./src/Js/validar.js"></script>
 </body>
 </html>

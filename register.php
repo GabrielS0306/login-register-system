@@ -21,13 +21,15 @@
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="email" required>
             </div>
-            <div class="campo">
+            <div class="campo password">
                 <label for="password">Senha</label>
-                <input type="password" name="password" id="password" placeholder="password" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i class="fa-solid fa-eye-slash toggle-password"></i>
             </div>
-            <div class="campo">
-                <label for="confirm_password">Confirmar Senha</label>
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password" required>
+            <div class="campo password">
+                <label for="password_confirm">Confirmar senha</label>
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm password" required>
+                <i class="fa-solid fa-eye-slash toggle-password"></i>
             </div>
             <button type="submit">Cadastrar</button>
         </form>
@@ -43,8 +45,13 @@
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
         </div>
+        <p class="auth-link">
+            Já tem uma conta?
+            <a href="login.php">Entrar</a>
+        </p>
     </div>
 
+    <script src="./src/Js/script.js"></script>
     <script src="./src/Js/validar.js"></script>
 </body>
 </html>

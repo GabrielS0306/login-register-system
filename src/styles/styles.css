@@ -63,6 +63,23 @@ body {
     border-radius: 5px;
 }
 
+.container form .campo.password {
+    position: relative;
+}
+
+.container form .campo.password i {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.container form .campo.password input {
+    padding-right: 35px;
+}
+
 .container form .campo input:focus {
     outline: none;
     border-color: var(--primary-color);
@@ -113,7 +130,28 @@ body {
 
 .container .social_midias a > i {
     color: var(--text-color);
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
+}
+
+.container .social_midias a > i:hover {
+    color: var(--primary-color);
+}
+
+.container .auth-link {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.container .auth-link a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container .auth-link a:hover {
+    text-decoration: underline;
 }
 
 /* Tablets */
