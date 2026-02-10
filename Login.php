@@ -25,7 +25,7 @@
             <div class="campo password">
                 <label for="password">Senha</label>
                 <input type="password" name="password" id="password" placeholder="password" required>
-                <i id="togglePassword" class="fa-solid fa-eye-slash"></i>
+                <i class="fa-solid fa-eye-slash toggle-password"></i>
             </div>
             <div id="forgot_password">
                 <a href="#">forgot password?</a>
