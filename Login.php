@@ -14,9 +14,12 @@
 <body>
     <div class="container">
         <?php if (isset($_SESSION['error'])): ?>
-            <div class="error"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
+            <div class="error"><? echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
         <?php endif; ?>
-        <h1>Login</h1>
+        <span>
+            <h1>Login</h1>
+            <i class="fa-solid fa-sun theme-toggle"></i>     
+        </span>
         <form action="./action/login.php" method="post">
             <div class="campo">
                 <label for="email">Email</label>

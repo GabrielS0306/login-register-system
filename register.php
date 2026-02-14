@@ -11,7 +11,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Register</h1>
+        <span>
+            <h1>Register</h1>
+            <i class="fa-solid fa-sun theme-toggle"></i>     
+        </span>
         <form action="./action/register.php" method="post">
             <div class="campo">
                 <label for="user">Usuário</label>
