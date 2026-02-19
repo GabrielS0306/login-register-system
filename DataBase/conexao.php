@@ -7,11 +7,11 @@
         $username = 'root';
         $password = '';
 
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        $conexao = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        echo "Conexão realizada com sucesso!";
+        echo "Conexão realizada com sucesso! <br>";
     } catch (PDOException $erro) {
         echo "Erro na conexão: " . $erro->getMessage();
     }

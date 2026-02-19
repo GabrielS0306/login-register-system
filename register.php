@@ -31,7 +31,7 @@
             </div>
             <div class="campo password">
                 <label for="password_confirm">Confirmar senha</label>
-                <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm password">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password">
                 <i class="fa-solid fa-eye-slash toggle-password"></i>
             </div>
             <button type="submit">Cadastrar</button>
