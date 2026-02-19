@@ -18,20 +18,20 @@
         <form action="./action/register.php" method="post">
             <div class="campo">
                 <label for="user">Usuário</label>
-                <input type="text" name="user" id="user" placeholder="user" required>
+                <input type="text" name="user" id="user" placeholder="user">
             </div>
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="email" required>
+                <input type="email" name="email" id="email" placeholder="email">
             </div>
             <div class="campo password">
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="password" name="password" placeholder="Password">
                 <i class="fa-solid fa-eye-slash toggle-password"></i>
             </div>
             <div class="campo password">
                 <label for="password_confirm">Confirmar senha</label>
-                <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm password" required>
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm password">
                 <i class="fa-solid fa-eye-slash toggle-password"></i>
             </div>
             <button type="submit">Cadastrar</button>

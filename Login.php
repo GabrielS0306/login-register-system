@@ -14,7 +14,9 @@
 <body>
     <div class="container">
         <?php if (isset($_SESSION['error'])): ?>
-            <div class="error"><? echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
+            <div class="error">
+                <? echo $_SESSION['error']; unset($_SESSION['error']); ?>
+            </div>
         <?php endif; ?>
         <span>
             <h1>Login</h1>
@@ -23,11 +25,11 @@
         <form action="./action/login.php" method="post">
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="email" required>
+                <input type="email" name="email" id="email" placeholder="email">
             </div>
             <div class="campo password">
                 <label for="password">Senha</label>
-                <input type="password" name="password" id="password" placeholder="password" required>
+                <input type="password" name="password" id="password" placeholder="password">
                 <i class="fa-solid fa-eye-slash toggle-password"></i>
             </div>
             <div id="forgot_password">
