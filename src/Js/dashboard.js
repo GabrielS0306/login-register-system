@@ -1,18 +1,15 @@
 const toggleTheme = document.getElementById('toggleTheme');
+const icon = toggleTheme.querySelector('i');
 const body = document.body;
-const logout = document.querySelector('.logout');
 
 toggleTheme.addEventListener('click', () => {
     body.classList.toggle('dark');
 
     if (body.classList.contains('dark')) {
-        toggleTheme.textContent = "☀️";
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
     } else {
-        toggleTheme.textContent = "🌙";
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
     }
-});
-
-logout.addEventListener('click', () => {
-    alert("Sessão encerrada.");
-    window.location.href = "login.html";
 });

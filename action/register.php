@@ -36,7 +36,7 @@
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
     // verifica email existente
-    $sql = "SELECT id FROM users WHERE email = :email";
+    $sql = "SELECT id FROM usuarios WHERE email = :email";
     $stmt = $conexao->prepare($sql);
     $stmt->bindParam(':email', $email);
     $stmt->execute();
@@ -47,7 +47,7 @@
     }
 
     // insere usuário
-    $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+    $sql = "INSERT INTO usuarios (username, email, password) VALUES (:username, :email, :password)";
     $stmt = $conexao->prepare($sql);
     $stmt->bindParam(':username', $user);
     $stmt->bindParam(':email', $email);

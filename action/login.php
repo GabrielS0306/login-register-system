@@ -1,6 +1,5 @@
 <?php
 
-    // login.php - processa o login do usuário
     session_start();
     require_once '../DataBase/conexao.php';
 
@@ -18,23 +17,24 @@
         exit;
     }
 
-    // busca usuário APENAS pelo email
-    $stmt = $conexao->prepare("SELECT id, username, password FROM users WHERE email = :email");
+    $stmt = $conexao->prepare("
+        SELECT id, username, email, password 
+        FROM usuarios 
+        WHERE email = :email
+    ");
 
     $stmt->execute([':email' => $email]);
-
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // verifica a senha
     if ($user && password_verify($senha, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['usuario'] = $user['username'];
+        $_SESSION['email'] = $user['email']; // 🔥 agora funciona no dashboard
 
         header("Location: ../dashboard.php");
         exit;
     }
 
-    // login inválido
     $_SESSION['error'] = "Email ou senha inválidos.";
     header("Location: ../login.php");
     exit;

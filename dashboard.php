@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+
+
     if (!isset($_SESSION['user_id'])) {
         header("Location: login.php");
         exit;
@@ -12,34 +14,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <!-- css -->
     <link rel="stylesheet" href="./src/styles/dashboard.css">
+    <!-- icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <aside class="sidebar">
-        <h2 class="logo">DevPanel</h2>
-        <nav>
-            <ul>
-                <li class="active">Dashboard</li>
-                <li>Projetos</li>
-                <li>Relatórios</li>
-                <li>Configurações</li>
-            </ul>
-        </nav>
+        <div class="sidebar-top">
+            <h2 class="logo">DevPanel</h2>
+            <nav>
+                <ul>
+                    <li class="active">Dashboard</li>
+                    <li>Projetos</li>
+                    <li>Relatórios</li>
+                    <li>Configurações</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar-bottom">
+            <hr>
+            <div id="perfil">
+                <img src="https://i.pravatar.cc/40" alt="User">
+                <div>
+                    <p><?= htmlspecialchars($_SESSION['usuario']) ?></p>
+                    <p><?= htmlspecialchars($_SESSION['email']) ?? "Email não disponivel" ?></p>
+                </div>
+            </div>
+        </div>
     </aside>
     <div class="main-content">
         <header class="topbar">
             <div>
                 <h1>Dashboard</h1>
                 <p>
-                    Bem-vindo de volta,  
+                    Bem-vindo,  
                     <?= htmlspecialchars($_SESSION['usuario']) ?> 
                 </p>
             </div>
             <div class="top-actions">
-                <button id="toggleTheme">🌙</button>
+                <button id="toggleTheme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <div class="user">
-                    <img src="https://i.pravatar.cc/40" alt="User">
-                    <button class="logout">Sair</button>
+                    <a href="logout.php" class="logout" onclick="return confirm('Tem certeza que deseja sair?')">
+                        <i class="fa-solid fa-right-from-bracket"></i> Sair
+                    </a>
                 </div>
             </div>
         </header>
