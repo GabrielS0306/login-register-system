@@ -37,7 +37,7 @@
 
     // verifica email existente
     $sql = "SELECT id FROM users WHERE email = :email";
-    $stmt = $pdo->prepare($sql);
+    $stmt = $conexao->prepare($sql);
     $stmt->bindParam(':email', $email);
     $stmt->execute();
 
@@ -48,7 +48,7 @@
 
     // insere usuário
     $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
-    $stmt = $pdo->prepare($sql);
+    $stmt = $conexao->prepare($sql);
     $stmt->bindParam(':username', $user);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':password', $hashed_password);
